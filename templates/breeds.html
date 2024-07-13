@@ -1,0 +1,26 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/adoption')
+def adoption():
+    return render_template('adoption.html')
+
+@app.route('/day_boarding')
+def day_boarding():
+    return render_template('day_boarding.html')
+
+@app.route('/veterinary_care')
+def veterinary_care():
+    return render_template('veterinary_care.html')
+
+@app.route('/chatbot')
+def chatbot():
+    return render_template('chatbot.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
